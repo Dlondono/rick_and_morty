@@ -44,8 +44,14 @@ class _LocationDetailScreenState extends State<LocationDetailScreen> {
                         const SizedBox(
                           height: 32,
                         ),
-                        Text(location.name,
-                          style: Theme.of(context).textTheme.titleLarge,
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.1),
+                          child: Text(location.name,
+                            style: Theme.of(context).textTheme.titleLarge,
+                            textAlign: TextAlign.center,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
                         ),
                         const SizedBox(
                           height: 32,

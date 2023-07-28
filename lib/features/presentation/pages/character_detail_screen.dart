@@ -61,9 +61,15 @@ class _CharacterDetailScreenState extends State<CharacterDetailScreen> {
                   CircleAvatar(
                       backgroundImage: NetworkImage(character.image),
                       radius: MediaQuery.of(context).size.width * 0.2),
-                  Text(
-                    character.name,
-                    style: Theme.of(context).textTheme.titleLarge,
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.1),
+                    child: Text(
+                      character.name,
+                      style: Theme.of(context).textTheme.titleLarge,
+                      textAlign: TextAlign.center,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
                   ),
                   const SizedBox(
                     height: 32,
